@@ -1,8 +1,21 @@
-<li>
+<!-- <li>
   {{#link-to 'post' post.id}}{{post.title}} by {{post.author}}{{/link-to}}
   {{#if isContentShowing}}
     <p {{action 'contentHide'}}>{{post.content}} <img src={{post.img}} alt="post image"></p>
   {{else}}
     <button {{action 'contentShow'}}>Show Article</button>
   {{/if}}
-</li>
+</li> -->
+
+<div class="panel panel-default">
+  {{#link-to 'post' post.id}}
+  <div class="panel-heading">
+    {{post.title}} by {{post.author}}
+  </div>
+  <hr>
+  <div class="panel-body">
+    <img src={{post.img}} alt="post image">
+    {{post.content}}
+  </div>
+  {{/link-to}}
+</div>
