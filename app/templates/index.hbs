@@ -1,0 +1,12 @@
+<h1>Welcome to Soccer Blog</h1>
+
+<p>We hope you are able to learn about the youth that can be the future of the USMNT</p>
+
+<ul>
+  {{#each model as |posts|}}
+    <li>{{posts.title}} by {{posts.author}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Contact us{{/link-to}}
