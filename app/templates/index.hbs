@@ -5,19 +5,25 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1 home-post">
-      {{#each model as |post|}}
+      {{#each model.posts as |post|}}
       {{post-tile post=post}}
       {{/each}}
     </div>
   </div>
 </div>
-<!-- <ul>
-  {{#each model as |post|}}
-    {{post-tile post=post}}
-  {{/each}}
-</ul> -->
 
 {{new-post savePost="savePost"}}
+
+<h2>Comments</h2>
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>{{comment.author}} - {{comment.comment}}</li>
+  {{/each}}
+</ul>
+
+{{new-comment saveComment="saveComment"}}
+
+<hr>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Contact us{{/link-to}}
