@@ -9,13 +9,5 @@ export default Ember.Component.extend({
     contentHide : function() {
       this.set('isContentShowing', false);
     },
-    update(post, params) {
-      this.sendAction('update', post, params);
-    },
-    delete(post) {
-      if (confirm('Are you sure you want to delete this Post?')) {
-        this.sendAction('destroyPost', post);
-      }
-    }
   }
 });
