@@ -3,8 +3,8 @@
 <p>We hope you are able to learn about the youth that can be the future of the USMNT</p>
 
 <ul>
-  {{#each model as |posts|}}
-    <li>{{posts.title}} by {{posts.author}}</li>
+  {{#each model as |post|}}
+    {{post-tile post=post}}
   {{/each}}
 </ul>
 

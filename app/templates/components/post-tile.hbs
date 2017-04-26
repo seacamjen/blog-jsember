@@ -1,0 +1,8 @@
+<li>
+  {{post.title}} by {{post.author}}
+  {{#if isContentShowing}}
+    <p {{action 'contentHide'}}>{{post.content}} <img src={{post.img}} alt="post image"></p>
+  {{else}}
+    <button {{action 'contentShow'}}>Show Article</button>
+  {{/if}}
+</li>
