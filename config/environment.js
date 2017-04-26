@@ -17,6 +17,15 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyBmXsuVkknkFY3c9C26NAxX-l7eWD_ERyE",
+      authDomain: "soccer-blog-1f742.firebaseapp.com",
+      databaseURL: "https://soccer-blog-1f742.firebaseio.com",
+      // projectId: "soccer-blog-1f742",
+      storageBucket: "soccer-blog-1f742.appspot.com"
+      // messagingSenderId: "1042448657980"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
