@@ -22,6 +22,11 @@
         {{input value=img id="img" placeholder=post.img}}
       </div>
 
+      <div class="form-group">
+        <label for="category">Post Category</label>
+        {{input value=category id="category" placeholder=post.category}}
+      </div>
+
       <button {{action 'update' post}}>Save</button>
     </form>
   </div>

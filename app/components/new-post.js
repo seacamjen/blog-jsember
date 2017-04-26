@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         title: this.get('title'),
         content: this.get('content'),
         img: this.get('img'),
+        category: this.get('category'),
       };
       this.set('addNewPost', false);
       this.sendAction('savePost', params);
