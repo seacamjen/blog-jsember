@@ -1,12 +1,17 @@
 <div class="container">
-  <header class="jumbotron">
-    <h2>Soccer Blog</h2>
+  <header>
+    <div class="jumbotron">
+      <h1>Future Stripes FC</h1>
+    </div>
   </header>
     {{outlet}}
   <hr>
-  <footer>
+  <footer class="center">
+    <button type="button" class="btn btn-default">{{#link-to 'index'}}Home{{/link-to}}</button>
+    <button type="button" class="btn btn-default">{{#link-to 'contact'}}Contact us{{/link-to}}</button>
+    <button type="button" class="btn btn-default">{{#link-to 'about'}}About us{{/link-to}}</button>
+    <!-- {{#link-to 'index'}}Home{{/link-to}}
     {{#link-to 'contact'}}Contact us{{/link-to}}
-    {{#link-to 'about'}}About us{{/link-to}}
-    {{#link-to 'index'}}Home{{/link-to}}
+    {{#link-to 'about'}}About us{{/link-to}} -->
   </footer>
 </div>

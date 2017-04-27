@@ -1,17 +1,24 @@
-<div class="panel panel-default">
-  {{#link-to 'post' post.id}}
+
+<br>
+<div class="panel panel-danger">
   <div class="panel-heading">
-    <div class="panel-title">
+    <p class="panel-title">
       {{post.title}} by {{post.author}}
+    </p>
+  </div>
+  {{#link-to 'post' post.id}}
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src={{post.img}} alt="post image">
+      </div>
+      <div class="col-md-8 block-with-text">
+        {{post.content}}
+      </div>
     </div>
   </div>
-  <hr>
-  <div class="panel-body">
-    <img src={{post.img}} alt="post image">
-    {{post.content}}
-  </div>
+  {{/link-to}}
   <div class="panel-footer">
     Category: {{post.category}}
   </div>
-  {{/link-to}}
 </div>
