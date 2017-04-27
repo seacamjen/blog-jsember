@@ -1,19 +1,29 @@
-{{post.title}}
 <br>
-{{post.content}}
-<img src={{post.img}} alt="article image" />
 <br>
-<p>Written by {{post.author}}</p>
+<div class="center">
+  <img src={{post.img}} alt="article image">
+</div>
 <br>
-{{post.category}}
+<div class="well">
+  {{post.content}}
+  <br>
+  <p class="pull-right"><strong>Written by {{post.author}}</strong></p>
+</div>
+<br>
+<span class="label label-info">{{post.category}}</span>
+<div class="pull-right">
+  <button {{action 'delete' post}}>Delete <span class="glyphicon glyphicon-trash"></span> </button>
+</div>
+<br>
 <hr>
 
-<h2>Comments</h2>
-<ul>
-  {{#each post.comments as |comment|}}
-    <li>{{comment-tile comment=comment destroyComment="destroyComment"}}</li>
-  {{/each}}
-</ul>
-<br>
+<h2 class="center">Comments</h2>
+<div class="container">
+  <div class="row">
+    {{#each post.comments as |comment|}}
+      {{comment-tile comment=comment destroyComment="destroyComment"}}
+    {{/each}}
+  </div>
+</div>
 
-<button {{action 'delete' post}}>Delete</button>
+<br>

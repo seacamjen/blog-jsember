@@ -1,7 +1,6 @@
-<h2>More info about {{model.author}}'s {{model.title}} article</h2>
+<h1 id="post-title" class="center">{{model.title}}</h1>
+  {{update-post post=model update="update"}}
 
-{{update-post post=model update="update"}}
+  {{post-detail post=model destroyPost="destroyPost" destroyComment="destroyComment"}}
 
-{{post-detail post=model destroyPost="destroyPost" destroyComment="destroyComment"}}
-
-{{new-comment saveComment="saveComment" post=model}}
+  {{new-comment saveComment="saveComment" post=model}}

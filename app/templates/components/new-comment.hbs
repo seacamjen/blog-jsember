@@ -8,11 +8,11 @@
       </div>
       <div class="form-group">
         <label for="comment">Comment</label>
-        {{input value=comment id="comment"}}
+        {{textarea value=comment id="comment"}}
       </div>
         <button {{action 'saveComment'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action "commentFormShow"}}>Add Comment</button>
+  <button {{action "commentFormShow"}}> <span class="glyphicon glyphicon-plus"></span> Add Comment</button>
 {{/if}}

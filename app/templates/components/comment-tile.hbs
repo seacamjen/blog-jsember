@@ -1,3 +1,9 @@
-<li>{{comment.comment}}<br>by: {{comment.author}}</li>
+<div class="col-md-6 col-md-offset-1">
+  <p class="comment-design">
+    <strong>{{comment.author}}:</strong> <br>  {{comment.comment}} 
+  </p>
+</div>
+<div class="pull-right">
 
-<button {{action 'delete' review}}>Delete Review</button>
+</div>
+<button {{action 'delete' review}}>Delete Comment <span class="glyphicon glyphicon-trash"></span> </button>

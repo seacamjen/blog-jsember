@@ -3,7 +3,7 @@
 <div class="panel panel-danger">
   <div class="panel-heading">
     <p class="panel-title">
-      {{post.title}} by {{post.author}}
+      <span id="post-title">{{post.title}}</span> by {{post.author}}
     </p>
   </div>
   {{#link-to 'post' post.id}}
