@@ -1,4 +1,5 @@
 {{#if addNewPost}}
+<div class="center">
   <h1>New Post</h1>
   <div>
     <form>
@@ -30,6 +31,9 @@
       <button {{action 'savePost'}}>Save</button>
     </form>
   </div>
+</div>
 {{else}}
-  <button {{action 'postFormShow'}}>New Post</button>
+<div class="pull-right">
+  <button class="btn btn-default"{{action 'postFormShow'}}> <span class="glyphicon glyphicon-plus"></span> New Post</button>
+</div>
 {{/if}}
