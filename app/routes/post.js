@@ -15,10 +15,20 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
+    updateComment(comment, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          comment.set(key,params[key]);
+        }
+      });
+      comment.save();
+      this.transitionTo('post');
+    },
+
     saveComment(params) {
       var newComment = this.store.createRecord('comment', params);
       var post = params.post;
-      post.get('comments').addObject('newComment');
+      post.get('comments').addObject(newComment);
       newComment.save().then(function() {
         return post.save();
       });

@@ -1,0 +1,18 @@
+{{#if updateCommentForm}}
+  <div class="center">
+    <h1>Update {{comment.author}}'s comment</h1>
+    <div>
+      <label for="author">Edit Name: </label>
+      {{input value=comment.author id="author" placeholder=comment.author}}
+    </div>
+    <div>
+      <label for="comment">Edit Comment</label>
+      {{textarea value=comment.comment id="comment" placeholder=comment.comment}}
+    </div>
+    <button class="btn btn-default"{{action 'updateComment' comment}}>Save</button>
+  </div>
+{{else}}
+  <div class="pull-right">
+    <button class="btn btn-default"{{action 'updateCommentForm'}}>Update <span class="glyphicon glyphicon-pencil"></span> </button>
+  </div>
+{{/if}}
