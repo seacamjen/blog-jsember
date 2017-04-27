@@ -6,4 +6,14 @@
 <p>Written by {{post.author}}</p>
 <br>
 {{post.category}}
+<hr>
+
+<h2>Comments</h2>
+<ul>
+  {{#each post.comments as |comment|}}
+    <li>{{comment-tile comment=comment destroyComment="destroyComment"}}</li>
+  {{/each}}
+</ul>
+<br>
+
 <button {{action 'delete' post}}>Delete</button>

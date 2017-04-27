@@ -13,17 +13,4 @@
 </div>
 
 {{new-post savePost="savePost"}}
-
-<h2>Comments</h2>
-<ul>
-  {{#each model.comments as |comment|}}
-    <li>{{comment.author}} - {{comment.comment}}</li>
-  {{/each}}
-</ul>
-
-{{new-comment saveComment="saveComment"}}
-
 <hr>
-
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Contact us{{/link-to}}
